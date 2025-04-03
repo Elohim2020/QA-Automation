@@ -20,9 +20,20 @@ Este test valida múltiples propiedades de un Pokémon usando datos obtenidos de
 - Experiencia base (`base_experience`)
 
 ### 📁 Archivo principal:
-
+`src/test/resources/examples/users/getPokemon.feature`
 
 
 ### 🧪 Ejemplo de ejecución:
 ```bash
+mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
+
+---
+
+## 📦 Clonar este repositorio (ejecutar en tu máquina local)
+
+```bash
+git clone https://github.com/Elohim2020/QA-Automation.git
+cd QA-Automation
+
+## Posteriormente ejecuta
 mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
