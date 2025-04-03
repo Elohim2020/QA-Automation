@@ -1,0 +1,10 @@
+# .gitignore
+# Ignora archivos temporales de compilación y configuración
+target/
+.vscode/
+.idea/
+*.iml
+*.log
+*.tmp
+*.class
+.DS_Store
