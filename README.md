@@ -1,6 +1,6 @@
 # 🚀 QA Automation con Karate DSL – Portafolio Pokémon
 
-Este proyecto forma parte de mi portafolio como **QA Automation Engineer**. Utiliza [Karate DSL](https://github.com/karatelabs/karate) para realizar pruebas automatizadas sobre la PokéAPI.
+Este proyecto forma parte de mi portafolio como **QA Automation Engineer**. Utiliza [Karate DSL](https://github.com/karatelabs/karate) para realizar pruebas automatizadas sobre la PokéAPI y otras APIs públicas.
 
 ## 🧰 Tecnologías
 - 🥋 Karate DSL
@@ -14,26 +14,46 @@ Este proyecto forma parte de mi portafolio como **QA Automation Engineer**. Util
 Este test valida múltiples propiedades de un Pokémon usando datos obtenidos desde [https://pokeapi.com](https://pokeapi.co).
 
 ### ✅ Validaciones incluidas:
-- Nombre del pokémon (`forms[0].name`)
-- Tipo principal (`types[0].type.name`)
-- Habilidad esperada (`abilities[*].ability.name`)
-- Experiencia base (`base_experience`)
+✅ Nombre del pokémon
+✅ Tipo principal
+✅ Habilidad esperada
+✅ Experiencia base
+
 
 ### 📁 Archivo principal:
-`src/test/resources/examples/users/getPokemon.feature`
-
+src/test/resources/examples/users/getPokemon.feature
 
 ### 🧪 Ejemplo de ejecución:
 ```bash
 mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
 
----
 
-## 📦 Clonar este repositorio (ejecutar en tu máquina local)
+🧪 Reto #2: Validación de login dinámico con Reqres
+Este escenario prueba múltiples casos de login exitoso y fallido usando la API pública de https://reqres.in/api/login.
 
-```bash
+✔️ Validaciones realizadas:
+Código de estado (200 para login válido, 400 para errores)
+Verificación de token solo si la respuesta es 200
+Impresión de la respuesta para inspección
+
+📁 Archivo:
+src/test/resources/examples/users/loginOutline.feature
+
+📄 Ejemplo del Scenario Outline usado:
+Examples:
+  | email                | password   | status |
+  | eve.holt@reqres.in  | cityslicka | 200    |
+  | eve.holt@reqres.in  |            | 400    |
+  |                     | cityslicka | 400    |
+  |                     |            | 400    |
+
+▶️ Ejecutar el test:
+mvn test -Dkarate.options="classpath:examples/users/loginOutline.feature"
+
+📦 Clonar este repositorio
 git clone https://github.com/Elohim2020/QA-Automation.git
 cd QA-Automation
 
-## Posteriormente ejecuta
+▶️ Ejecutar:
 mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
+
