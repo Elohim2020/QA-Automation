@@ -11,7 +11,7 @@ Este proyecto forma parte de mi portafolio como **QA Automation Engineer**. Util
 
 ## 🧪 Test automatizado: Información de Pokémons
 
-Este test valida múltiples propiedades de un Pokémon usando datos obtenidos desde [https://pokeapi.co](https://pokeapi.co).
+Este test valida múltiples propiedades de un Pokémon usando datos obtenidos desde [https://pokeapi.com](https://pokeapi.co).
 
 ### ✅ Validaciones incluidas:
 - Nombre del pokémon (`forms[0].name`)
