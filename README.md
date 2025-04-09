@@ -74,6 +74,7 @@ mvn test -Dkarate.options="classpath:examples/[ruta-del-feature]"
 
 ⭐ Créditos y contacto
 Este proyecto fue desarrollado por @Elohim2020 como parte de su portafolio profesional de QA Automation.
+
 Dale ⭐ al repositorio si te resultó útil y compártelo con otros testers.
 
 🔗 GitHub: github.com/Elohim2020
