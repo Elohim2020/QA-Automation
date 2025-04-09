@@ -44,20 +44,22 @@ mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
 ## 🧪 Reto 2: Login dinámico con Reqres
 Este escenario prueba múltiples casos de login exitoso y fallido usando la API pública de Reqres.
 
-### ✔️ Validaciones realizadas:
--Código de estado (200 para login válido, 400 para errores)
--Verificación de token solo si la respuesta es 200
--Impresión de la respuesta para inspección
+### ✅ Validaciones realizadas:
+- Código de estado (200 para login válido, 400 para errores)
+- Verificación de token solo si la respuesta es 200
+- Impresión de la respuesta para inspección
 
 ### 📁 Archivo:
 src/test/resources/examples/users/loginOutline.feature
 
+```bash
 Examples:
   | email               | password   | status |
   | eve.holt@reqres.in  | cityslicka | 200    |
   | eve.holt@reqres.in  |            | 400    |
   |                     | cityslicka | 400    |
   |                     |            | 400    |
+```
 
 ▶️ Ejecutar:
 ```bash
