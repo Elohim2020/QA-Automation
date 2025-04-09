@@ -25,7 +25,6 @@ Este proyecto forma parte de mi portafolio como **QA Automation Engineer**. Util
 ---
 
 ## 🧪 Reto 1: Test de Pokémons
-
 Este test valida múltiples propiedades de un Pokémon usando datos obtenidos desde [https://pokeapi.co](https://pokeapi.co).
 
 ### ✅ Validaciones incluidas:
@@ -40,16 +39,17 @@ src/test/resources/examples/users/getPokemon.feature
 ### ▶️ Ejecutar:
 ```bash
 mvn test -Dkarate.options="classpath:examples/users/getPokemon.feature"
+```
 
 ## 🧪 Reto 2: Login dinámico con Reqres
 Este escenario prueba múltiples casos de login exitoso y fallido usando la API pública de Reqres.
 
-✔️ Validaciones realizadas:
+### ✔️ Validaciones realizadas:
 -Código de estado (200 para login válido, 400 para errores)
 -Verificación de token solo si la respuesta es 200
 -Impresión de la respuesta para inspección
 
-📁 Archivo:
+### 📁 Archivo:
 src/test/resources/examples/users/loginOutline.feature
 
 Examples:
@@ -60,11 +60,15 @@ Examples:
   |                     |            | 400    |
 
 ▶️ Ejecutar:
+```bash
 mvn test -Dkarate.options="classpath:examples/users/loginOutline.feature"
+```
 
 📦 Clonar este repositorio
 Para ejecutar el proyecto en tu máquina local:
+```bash
 mvn test -Dkarate.options="classpath:examples/[ruta-del-feature]"
+```
 
 ⭐ Créditos y contacto
 Este proyecto fue desarrollado por @Elohim2020 como parte de su portafolio profesional de QA Automation.
